@@ -48,3 +48,41 @@ h3. 내장 명령
 * exec
 ** 새로운 프로세스를 생성하지 않고 명령을 실행, 파일디스크립터를 리다이렉트
 ** . 명령은 실행을 마칠때 제어를 본래 스크립트로 돌려주지만 exec는 그렇지 않다.
+* trap
+** 신호잡기
+* kill
+** 프로세스 중단
+** INT를 무시하도록 작성된 프로그램은 ctrl+z를 눌러도 소용없다. KILL 신호는 감지하거나 무시하는것이 불가능하다.
+
+h3. 표현식
+h5. 수식연산
+* let ".."
+* let count=count+1 value=value*10+b
+* ((..))
+* ((count=count+1, value=value*10+b))
+
+h5. 논리연산(조건식)
+* [[ ]]
+* || &&
+* 문자열 비교
+** [[ artist = a* ]]
+** [[ abc = a?? ]]
+* 문자열 패턴매치 
+* # 최소한 매치되는 접두어를 제거
+* ## 최대한 ..
+* % 최소한 매치되는 점미어를 제거
+* %% 최대한 ..
+
+
+h5. 연산자
+* &&와 || 연산자는 short-circuiting 연산자라도 한다.
+** mkdir bkup && cp -r src bkuop
+** mkdir bkup || echo "mkdir of bkup failed" >> /tmp/log
+* 3항 연산자
+** expr ? expr2 : expr3
+
+
+
+
+
+
