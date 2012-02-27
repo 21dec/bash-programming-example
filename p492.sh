@@ -11,3 +11,5 @@ if [ "$1" = "-v" ]; then
 else
     exec cat -- "$@"
 fi
+
+echo "여기는 출력되지 않음"
